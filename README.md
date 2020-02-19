@@ -14,7 +14,7 @@ cd portal-home
 cp .env.template .env
 ```
 
-**3. Running**
+**2. Running**
 
 - If you're going to run in a development environment, use:
 ```shell
