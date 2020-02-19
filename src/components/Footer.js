@@ -1,41 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import { Typography, Toolbar } from '@material-ui/core';
 import logo from '../assets/img/linea-logo-mini.png';
 import gitVersion from '../assets/json/version.json';
 
-function Footer(props) {
-  const { drawerOpen } = props;
-  const useStyles = makeStyles(theme => ({
+function Footer() {
+  const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
       float: 'right',
       height: 64,
     },
-    grow: {
-      flexGrow: 1,
-    },
-    appBarDrawerOpen: {
+    drawer: {
       top: 'auto',
       bottom: 0,
       backgroundColor: '#596C7B',
-      width: 'calc(100% - 240px)',
+      // width: '100%',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
       }),
     },
-    appBarDrawerClose: {
-      top: 'auto',
-      bottom: 0,
-      backgroundColor: '#596C7B',
-      width: `calc(100% - ${theme.spacing(7) - 1}px)`,
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
+    grow: {
+      flexGrow: 1,
     },
     toolbar: {
       alignItems: 'center',
@@ -60,7 +48,9 @@ function Footer(props) {
     }
   };
 
-  const instance = process.env.NODE_ENV === 'production' ? window._env_.REACT_APP_INSTANCE : process.env.REACT_APP_INSTANCE;
+  const instance = process.env.NODE_ENV === 'production'
+    ? window._env_.REACT_APP_INSTANCE // eslint-disable-line
+    : process.env.REACT_APP_INSTANCE;
 
   let version = '--';
   let vlink = null;
@@ -80,13 +70,14 @@ function Footer(props) {
 
   return (
     <footer className={classes.root}>
-      <AppBar position="fixed" className={drawerOpen ? classes.appBarDrawerOpen : classes.appBarDrawerClose}>
+      <AppBar position="fixed" className={classes.drawer}>
         <Toolbar className={classes.toolbar}>
           <Typography color="inherit" className={classes.grow}>
             {instance}
             {' '}
             Home:
             {' '}
+            {/* eslint-disable-next-line */}
             <span
               onClick={() => openGithub(vlink)}
               className={classes.versionLink}
@@ -108,9 +99,5 @@ function Footer(props) {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  drawerOpen: PropTypes.bool.isRequired,
-};
 
 export default Footer;

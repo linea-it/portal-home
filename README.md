@@ -11,6 +11,7 @@ This tool has the purpose of presenting all Portal microservices' applications. 
 ```shell
 git clone https://github.com/linea-it/portal-home.git
 cd portal-home
+cp .env.template .env
 ```
 
 **3. Running**
