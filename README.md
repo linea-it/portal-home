@@ -36,5 +36,5 @@ docker-compose up
 ## Release History
 
 * v1.0.0
-   * INIT: First version
+   * INIT: First version.
 
