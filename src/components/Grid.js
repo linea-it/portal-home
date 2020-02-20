@@ -10,7 +10,9 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   grid: {
-    padding: 200,
+    paddingLeft: 100,
+    paddingRight: 100,
+    paddingTop: 100,
   }
 }));
 
@@ -22,7 +24,7 @@ export default function FullWidthGrid() {
         <Grid className={classes.grid} justify="space-evenly" alignItems="stretch" container spacing={3} key="gridPrincipal">
             {
                 plataformas.map((card) => 
-                    <Grid item xs={12} sm={4} key={card.id} >
+                    <Grid item xs={12} sm={4} spacin={3} key={card.id} >
                         <Card card={card} />
                     </Grid>
                 )

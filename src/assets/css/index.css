@@ -27,12 +27,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.MuiAppBar-colorPrimary {
-  background-color: #34465D!important;
-  color: #5C6B7D;
-}
-
-.MuiTabs-flexContainer {
-  background-color: #5c6b7d;
-}

@@ -1,9 +1,16 @@
 import React from 'react';
+import Container from '@material-ui/core/Container';
+
 import Grid from './Grid'
+import HeaderImage from './HeaderImage'
 
 export default function Main() {
 
     return (
-        <Grid />
+        <Container  >
+            <HeaderImage />
+            <Grid />
+        </Container>
+        
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import {  AppBar,  Toolbar,  Typography,  IconButton } from '@material-ui/core';
+import {  AppBar,  Toolbar,  Typography,  IconButton, ButtonGroup, Button } from '@material-ui/core';
 
 import Logo from '../assets/img/icon-des.png';
 
@@ -16,13 +16,16 @@ const styles = {
   AppBar: {
     boxShadow: 'none',
   },
+  buttonGroup: {
+    padding: 20,
+    paddingLeft: 100
+  },
 };
 
 class Header extends React.Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
   };
-
   render() {
     const { classes } = this.props;
 
@@ -35,6 +38,12 @@ class Header extends React.Component {
             <Typography variant="h6" color="inherit">
               DES Science Portal
             </Typography>
+            <ButtonGroup variant="text" className={classes.buttonGroup} color="inherit" aria-label="text primary button group">
+              <Button>Home</Button>
+              <Button>Tutorials</Button>
+              <Button>Contact us</Button>
+            </ButtonGroup>
+
           </Toolbar>
         </AppBar>
     );
