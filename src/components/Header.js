@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import {  AppBar,  Toolbar,  Typography,  IconButton,  ButtonGroup, Button } from '@material-ui/core';
+import {  AppBar,  Toolbar,  Typography,  IconButton } from '@material-ui/core';
 
 import Logo from '../assets/img/icon-des.png';
 
@@ -29,15 +29,11 @@ class Header extends React.Component {
     return (
         <AppBar className={classes.AppBar} position="fixed">
           <Toolbar variant="dense">
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            >
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" >
               <img src={Logo} alt="Portal" />
             </IconButton>
             <Typography variant="h6" color="inherit">
-              Portal
+              DES Science Portal
             </Typography>
           </Toolbar>
         </AppBar>

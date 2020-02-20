@@ -5,8 +5,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
 
 const useStyles = makeStyles({
   root: {
@@ -23,26 +23,19 @@ export default function MediaCard({card}) {
   return (
     <Card className={classes.root}>
       <CardActionArea href={card.uri}>
-        <CardMedia
-          className={classes.media}
-          image={card.uriImage}
-          title={card.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {card.title}
+        {/* <CardMedia className={classes.media} image={card.uriImage} title={card.title} > */}
+          <i className={`fa fa-${card.icon}`}></i> 
+          <Typography gutterBottom variant="h4" component="h2">
+            {card.title} 
           </Typography>
-          {/* <Typography variant="body2" color="textSecondary" component="p">
+        {/* </CardMedia> */}
+        <CardContent>
+          <Typography variant="subtitle1" color="textSecondary" component="p">
               {card.description}  
-          </Typography> */}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" 
-        href={card.uri}
-        color="primary">
-          Acessar
-        </Button>
       </CardActions>
     </Card>
   );

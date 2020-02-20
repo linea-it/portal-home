@@ -5,7 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 120px!important;
+  margin-top: 60px!important;
+  padding: 20px;
+}
+
+i {
+  color: #34465D;
+  font-size: 65px;
+  margin-left: 45%;
+}
+
+.MuiTypography-h4 {
+  padding-top: 1em!important;
+  padding-left: 1em!important;
+  color: #34465D!important;
+  text-shadow: 0.0em 0.1em 0.1em #5c6b7d;
+  text-align: center;
 }
 
 code {
@@ -20,61 +35,4 @@ code {
 
 .MuiTabs-flexContainer {
   background-color: #5c6b7d;
-}
-
-.MuiCard-root {
-  max-width: 1000px!important;
-}
-
-.MuiButtonGroup-groupedHorizontal {
-  border-right: 1px solid rgba(0, 0, 0, 0.23);
-  border-color: black!important;
-  color: white!important;
-}
-
-.MuiButtonGroup-groupedTextHorizontal:not(:last-child) {
-  padding-left: 20px!important;
-  padding-right: 20px;
-}
-
-.MuiButtonGroup-groupedHorizontal:not(:first-child) {
-  padding-left: 20px!important;
-  padding-right: 20px;
-}
-
-.hover11 figure img {
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover11 figure:hover img {
-	opacity: .5;
-}
-
-.MuiCardMedia-root {
-  opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-  width: 50%;
-  margin-left: 25%;
-}
-
-.MuiCardMedia-root:hover {
-	opacity: .5;
-}
-
-p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 40px;
-}
-
-h2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 60px;
-}
-
-.MuiTypography-h6 {
-  font-size: 1.5rem!important;
 }

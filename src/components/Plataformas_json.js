@@ -1,42 +1,52 @@
-import ImagePlataforma from '../../src/assets/img/linea.png';
+import ImagePlataforma1 from '../../src/assets/img/background-card6.jpg';
+import ImagePlataforma2 from '../../src/assets/img/background-card2.jpg';
+import ImagePlataforma3 from '../../src/assets/img/background-card3.jpg';
+import ImagePlataforma4 from '../../src/assets/img/background-card4.jpg';
+import ImagePlataforma5 from '../../src/assets/img/background-card5.jpg';
+//import ImagePlataforma6 from '../../src/assets/img/background-card6.jpg';
 
 const uriBase = "http://scienceportal-dev.linea.gov.br/";
 
 export default (
     [{
             "id": 1,
-            "uriImage": ImagePlataforma,
-            "title": "DES Science Portal Dashboard",
-            //"description": "Lorem ipsum arcu felis dictum adipiscing vitae cras, morbi viverra semper ultrices sed non, et fermentum luctus risus gravida condimentum. ",
-            "uri": `${uriBase}dashboard/`
+            "uriImage": ImagePlataforma1,
+            "title": "Dashboard",
+            "description": "Lorem ipsum arcu felis dictum adipiscing vitae cras. ",
+            "uri": `${uriBase}dashboard/`,
+            "icon": 'border-all'
         },
         {
             "id": 2,
-            "uriImage": ImagePlataforma,
-            "title": "Portal Monitor",
-            //"description": "A Amazon Web Services oferece serviços de computação em nuvem confiáveis, escaláveis e acessíveis. ",
-            "uri": `${uriBase}monitor/`
+            "uriImage": ImagePlataforma2,
+            "title": "Monitor",
+            "description": "Lorem ipsum arcu felis dictum adipiscing vitae cras. ",
+            "uri": `${uriBase}monitor/`,
+            "icon": 'television'
         },
         {
             "id": 3,
-            "uriImage": ImagePlataforma,
+            "uriImage": ImagePlataforma3,
             "title": "Science Products",
-            //"description": "Google Cloud Platform é uma suíte de computação em nuvem oferecida pelo Google. ",
-            "uri": `${uriBase}science-products/`
+            "description": "Lorem ipsum arcu felis dictum adipiscing vitae cras. ",
+            "uri": `${uriBase}science-products/`,
+            "icon": 'flask'
         },
         {
             "id": 4,
-            "uriImage": ImagePlataforma,
-            "title": "Portal User Interfaces",
-            //"description": "Google Cloud Platform é uma suíte de computação em nuvem oferecida pelo Google. ",
-            "uri": `${uriBase}user-interface/`
+            "uriImage": ImagePlataforma4,
+            "title": "User Interfaces",
+            "description": "Lorem ipsum arcu felis dictum adipiscing vitae cras. ",
+            "uri": `${uriBase}user-interface/`,
+            "icon": 'users'
         },
         {
             "id": 5,
-            "uriImage": ImagePlataforma,
-            "title": "Portal My Workspace",
-            //"description": "Lorem ipsum arcu felis dictum adipiscing vitae cras, morbi viverra semper ultrices sed non, et fermentum luctus risus gravida condimentum, Lorem ipsum arcu felis dictum adipiscing vitae cras, morbi viverra semper ultrices sed non, et fermentum luctus risus gravida condimentum. ",
-            "uri": `${uriBase}my-workspace/`
+            "uriImage": ImagePlataforma5,
+            "title": "My Workspace",
+            "description": "Lorem ipsum arcu felis dictum adipiscing vitae cras. ",
+            "uri": `${uriBase}my-workspace/`,
+            "icon": 'server'
         }
     ]
 )
