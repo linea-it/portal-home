@@ -23,12 +23,11 @@ export default function MediaCard({card}) {
   return (
     <Card className={classes.root}>
       <CardActionArea href={card.uri}>
-        {/* <CardMedia className={classes.media} image={card.uriImage} title={card.title} > */}
-          <i className={`fa fa-${card.icon}`}></i> 
+        <CardMedia className={classes.media} image={card.uriImage} title={card.title} > 
           <Typography gutterBottom variant="h4" component="h2">
-            {card.title} 
+          <i className={`fa fa-${card.icon}`}></i> &nbsp; {card.title} 
           </Typography>
-        {/* </CardMedia> */}
+        </CardMedia> 
         <CardContent>
           <Typography variant="subtitle1" color="textSecondary" component="p">
               {card.description}  

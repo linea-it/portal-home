@@ -9,18 +9,12 @@ body {
   padding: 20px;
 }
 
-i {
-  color: #34465D;
-  font-size: 65px;
-  margin-left: 45%;
-}
-
 .MuiTypography-h4 {
+  font-size: 1.5em!important;
   padding-top: 1em!important;
   padding-left: 1em!important;
-  color: #34465D!important;
-  text-shadow: 0.0em 0.1em 0.1em #5c6b7d;
-  text-align: center;
+  color: white!important;
+  text-shadow: 0.0em 0.1em 0.1em black;
 }
 
 code {
