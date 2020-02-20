@@ -16,7 +16,6 @@ function Footer() {
       top: 'auto',
       bottom: 0,
       backgroundColor: '#596C7B',
-      // width: '100%',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
