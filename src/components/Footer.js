@@ -9,13 +9,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     float: 'right',
-    height: 64,
+    height: 52,
     marginTop: 32,
   },
   drawer: {
     top: 'auto',
     bottom: 0,
-    backgroundColor: '#333',
+    backgroundColor: theme.palette.primary.main,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     alignItems: 'center',
     justifyContent: 'space-between',
+    [theme.breakpoints.up('sm')]: {
+      minHeight: 52,
+    },
   },
   versionLink: {
     color: '#d2cf00',
@@ -71,7 +74,6 @@ function Footer() {
   return (
     <footer className={classes.root}>
       <AppBar position="fixed" className={classes.drawer}>
-        {/* <Stars /> */}
         <Toolbar className={classes.toolbar}>
           <Typography color="inherit" className={classes.grow}>
             {instance}
@@ -79,12 +81,12 @@ function Footer() {
             Portal Home:
             {' '}
             {/* eslint-disable-next-line */}
-            <span
-              onClick={() => openGithub(vlink)}
-              className={classes.versionLink}
-            >
-              {version}
-            </span>
+              <span
+                onClick={() => openGithub(vlink)}
+                className={classes.versionLink}
+              >
+                {version}
+              </span>
           </Typography>
           <Typography color="inherit">Powered by</Typography>
           <a href="http://www.linea.gov.br/" target="blank" className={classes.logoLink}>

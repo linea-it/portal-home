@@ -20,6 +20,41 @@ const useStyles = makeStyles((theme) => ({
 function Main() {
   const classes = useStyles();
 
+  const interfaces = [
+    {
+      id: 1,
+      title: 'Dashboard',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/dashboard/',
+    },
+    {
+      id: 2,
+      title: 'Portal Monitor',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/monitor/',
+    },
+    {
+      id: 3,
+      title: 'User Interface',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/user-interface/',
+    },
+    {
+      id: 4,
+      title: 'My Workspace',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/my-workspace/',
+    },
+    {
+      id: 5,
+      title: 'Science Products',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/science-products/',
+    },
+  ];
+
+  const interfacesHost = process.env.REACT_APP_INTERFACES_HOST;
+
   return (
     <div className={classes.root}>
       <Container>
@@ -30,24 +65,23 @@ function Main() {
           justify="center"
           alignItems="center"
         >
-          {[0, 1, 2, 3, 4, 5].map((el) => (
-            <Grid key={el} item xs={12} sm={2} md={3} lg={4}>
+          {interfaces.map((item) => (
+            <Grid key={item.id} item xs={12} sm={6} md={4}>
               <Card>
-                <CardActionArea>
+                <CardActionArea href={interfacesHost + item.pathname}>
                   <CardMedia
                     component="img"
-                    alt="Contemplative Reptile"
+                    alt={item.title}
                     height="140"
-                    image={`${process.env.PUBLIC_URL}/img/contemplative-reptile.jpg`}
-                    title="Contemplative Reptile"
+                    image={`${process.env.PUBLIC_URL}/img/des.jpg`}
+                    title={item.title}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Lizard
+                      {item.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                      across all continents except Antarctica
+                      {item.description}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
