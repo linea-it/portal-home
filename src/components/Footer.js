@@ -5,41 +5,41 @@ import { Typography, Toolbar } from '@material-ui/core';
 import logo from '../assets/img/linea-logo-mini.png';
 import gitVersion from '../assets/json/version.json';
 
-function Footer() {
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      float: 'right',
-      height: 64,
-    },
-    drawer: {
-      top: 'auto',
-      bottom: 0,
-      backgroundColor: '#596C7B',
-      // width: '100%',
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-    },
-    grow: {
-      flexGrow: 1,
-    },
-    toolbar: {
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    },
-    versionLink: {
-      color: '#d2cf00',
-      textDecoration: 'none',
-      fontSize: '0.9rem',
-      cursor: 'pointer',
-    },
-    logoLink: {
-      lineHeight: 0,
-    },
-  }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    float: 'right',
+    height: 64,
+    marginTop: 32,
+  },
+  drawer: {
+    top: 'auto',
+    bottom: 0,
+    backgroundColor: '#333',
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  toolbar: {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  versionLink: {
+    color: '#d2cf00',
+    textDecoration: 'none',
+    fontSize: '0.9rem',
+    cursor: 'pointer',
+  },
+  logoLink: {
+    lineHeight: 0,
+  },
+}));
 
+function Footer() {
   const classes = useStyles();
 
   const openGithub = (vlink) => {
@@ -71,11 +71,12 @@ function Footer() {
   return (
     <footer className={classes.root}>
       <AppBar position="fixed" className={classes.drawer}>
+        {/* <Stars /> */}
         <Toolbar className={classes.toolbar}>
           <Typography color="inherit" className={classes.grow}>
             {instance}
             {' '}
-            Home:
+            Portal Home:
             {' '}
             {/* eslint-disable-next-line */}
             <span
