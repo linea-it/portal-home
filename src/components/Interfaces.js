@@ -46,7 +46,7 @@ function Interfaces() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/monitor/',
       icon: 'television',
-      image: 'des1.jpg',
+      image: 'des2.jpg',
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ function Interfaces() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/user-interface/',
       icon: 'flask',
-      image: 'des2.jpg',
+      image: 'des3.jpg',
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ function Interfaces() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/science-products/',
       icon: 'server',
-      image: 'des4.jpg',
+      image: 'des7.jpg',
     },
   ];
 

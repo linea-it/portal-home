@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         zIndex: 2,
         marginTop: theme.spacing(12),
+        marginBottom: theme.spacing(6),
     },
         lineHeaderPatrocinadores:{
         borderColor: '#868686',
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
     },
+    supporters:{
+      paddingBottom: '15px',
+    }
 }));
 
 function Patrocinadores() {
@@ -31,33 +35,38 @@ function Patrocinadores() {
   const interfaces = [
     {
       id: 1,
-      title: 'Docker',
-      pathname: '/dashboard/',
-      image: 'docker.png'
+      title: 'CAPES',
+      image: 'capes-136x136.png'
     },
     {
       id: 2,
-      title: 'React',
-      pathname: '/monitor/',
-      image: 'react.png'
+      title: 'CNPq',
+      image: 'cnpq_logo.jpg'
     },
     {
       id: 3,
-      title: 'Yarn',
-      pathname: '/user-interface/',
-      image: 'yarn.png'
+      title: 'Finep',
+      image: 'finep.jpg'
     },
     {
       id: 4,
-      title: 'GraphQL',
-      pathname: '/my-workspace/',
-      image: 'graphql.png'
+      title: 'INCT',
+      image: 'logomarca_INCT.jpg'
     },
     {
       id: 5,
-      title: 'NPM',
-      pathname: '/my-workspace/',
-      image: 'npm.png'
+      title: 'FAPERGS',
+      image: 'fapergs-300x156.png'
+    },
+    {
+      id: 6,
+      title: 'FAPERJ',
+      image: 'faperj_logo-1024x431.jpg'
+    },
+    {
+      id: 7,
+      title: 'FAPESP',
+      image: 'logofapesp.jpg'
     }
   ];
 
@@ -72,13 +81,14 @@ function Patrocinadores() {
         <hr className={classes.lineHeaderPatrocinadores} />
         <Grid
           container
-          spacing={1}
+          spacing={2}
           direction="row"
           justify="space-evenly"
           alignItems="flex-start"
         >
           {interfaces.map((item) => (
-            <Grid key={item.id} item xs={12} sm={'auto'} md={'auto'}>
+            <Grid key={item.id} item xs={12} sm={3}
+            className={classes.supporters}>
                 <CardActionArea>
                   <CardMedia
                     className={classes.sizeCardMedia}
@@ -88,11 +98,6 @@ function Patrocinadores() {
                     image={`${process.env.PUBLIC_URL}/img/patrocinadores/${item.image}`}
                     title={item.title}
                   />
-                  {/* <CardContent>
-                    <Typography gutterBottom variant="h5" align="center" component="h2">
-                      {item.title}
-                    </Typography>
-                  </CardContent> */}
                 </CardActionArea>
             </Grid>
           ))}
