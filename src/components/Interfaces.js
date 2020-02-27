@@ -16,6 +16,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(12),
   },
+  titleItem:{
+    fontSize: '1.5em',
+    paddingTop: '1em',
+    paddingLeft: '1em',
+    color: 'white',
+    textShadow: '0.0em 0.1em 0.1em black',
+  },
+  cardMedia:{
+      minHeight: 150,
+  },
 }));
 
 function Interfaces() {
@@ -27,30 +37,40 @@ function Interfaces() {
       title: 'Dashboard',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/dashboard/',
+      icon: 'border-all',
+      image: 'des.jpg',
     },
     {
       id: 2,
       title: 'Portal Monitor',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/monitor/',
+      icon: 'television',
+      image: 'des1.jpg',
     },
     {
       id: 3,
       title: 'User Interface',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/user-interface/',
+      icon: 'flask',
+      image: 'des2.jpg',
     },
     {
       id: 4,
       title: 'My Workspace',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/my-workspace/',
+      icon: 'users',
+      image: 'des5.jpg',
     },
     {
       id: 5,
       title: 'Science Products',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/science-products/',
+      icon: 'server',
+      image: 'des4.jpg',
     },
   ];
 
@@ -58,39 +78,39 @@ function Interfaces() {
 
   return (
     <div className={classes.root}>
-      <Container>
+    <Container>
         <Grid
-          container
-          spacing={3}
-          direction="row"
-          justify="center"
-          alignItems="center"
-        >
-          {interfaces.map((item) => (
+            container
+            spacing={3}
+            direction="row"
+            justify="center"
+            alignItems="center"
+            >
+            {interfaces.map((item) => (
             <Grid key={item.id} item xs={12} sm={6} md={4}>
-              <Card>
-                <CardActionArea href={interfacesHost + item.pathname}>
-                  <CardMedia
-                    component="img"
-                    alt={item.title}
-                    height="140"
-                    image={`${process.env.PUBLIC_URL}/img/des.jpg`}
-                    title={item.title}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      {item.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+                <Card>    
+                    <CardActionArea href={interfacesHost + item.pathname}>
+                        <CardMedia
+                            alt={item.title}
+                            className={classes.cardMedia}
+                            image={`${process.env.PUBLIC_URL}/img/${item.image}`}
+                            title={item.title}>
+                            <Typography gutterBottom className={classes.titleItem}
+                                variant="h5" component="h2">
+                                <i className={`fa fa-${item.icon}`}></i> &nbsp; {item.title}
+                            </Typography>
+                        </CardMedia>
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                {item.description}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
             </Grid>
-          ))}
+            ))}
         </Grid>
-      </Container>
+    </Container>
     </div>
   );
 }
