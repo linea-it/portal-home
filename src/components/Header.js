@@ -94,6 +94,10 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     textShadow: '1px 1px 1px #333',
   },
+  purple: {
+    color: '#FFF',
+    backgroundColor: '#FF5722',
+  },
 }));
 
 function Header() {
@@ -104,7 +108,7 @@ function Header() {
   });
 
   const classes = useStyles({
-    scrollActive: trigger
+    scrollActive: trigger,
   });
 
   return (
@@ -141,7 +145,7 @@ function Header() {
             <Grid item xs={12} sm={2} md={6}>
               <Button className={classes.button}>
                 <div className={classes.userWrapper}>
-                  <Avatar alt="User" src={scientist} />
+                  <Avatar alt="User"className={classes.purple} >MT</Avatar>
                 </div>
                 <div>
                   <span className={classes.username}>Matheus</span>
