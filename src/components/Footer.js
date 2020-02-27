@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import { Typography, Toolbar } from '@material-ui/core';
+import { Typography, Toolbar, Container } from '@material-ui/core';
 import logo from '../assets/img/linea-logo-mini.png';
 import gitVersion from '../assets/json/version.json';
 
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       minHeight: 52,
     },
+    padding: 0,
   },
   versionLink: {
     color: '#d2cf00',
@@ -74,30 +75,32 @@ function Footer() {
   return (
     <footer className={classes.root}>
       <AppBar position="fixed" className={classes.drawer}>
-        <Toolbar className={classes.toolbar}>
-          <Typography color="inherit" className={classes.grow}>
-            {instance}
-            {' '}
-            Portal Home:
-            {' '}
-            {/* eslint-disable-next-line */}
-              <span
-                onClick={() => openGithub(vlink)}
-                className={classes.versionLink}
-              >
-                {version}
-              </span>
-          </Typography>
-          <Typography color="inherit">Powered by</Typography>
-          <a href="http://www.linea.gov.br/" target="blank" className={classes.logoLink}>
-            <img
-              src={logo}
-              title="LIneA"
-              alt="LineA"
-              style={{ cursor: 'pointer', marginLeft: '10px' }}
-            />
-          </a>
-        </Toolbar>
+        <Container>
+          <Toolbar className={classes.toolbar}>
+            <Typography color="inherit" className={classes.grow}>
+              {instance}
+              {' '}
+              Portal Home:
+              {' '}
+              {/* eslint-disable-next-line */}
+                <span
+                  onClick={() => openGithub(vlink)}
+                  className={classes.versionLink}
+                >
+                  {version}
+                </span>
+            </Typography>
+            <Typography color="inherit">Powered by</Typography>
+            <a href="http://www.linea.gov.br/" target="blank" className={classes.logoLink}>
+              <img
+                src={logo}
+                title="LIneA"
+                alt="LineA"
+                style={{ cursor: 'pointer', marginLeft: '10px' }}
+              />
+            </a>
+          </Toolbar>
+        </Container>
       </AppBar>
     </footer>
   );
