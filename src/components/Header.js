@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import logo from '../assets/img/linea.png';
 import scientist from '../assets/img/scientist.png';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Zoom from '@material-ui/core/Zoom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,22 +19,15 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '40px',
     // backgroundPositionY: -170,
   },
-  backgroundToolbarWrapper:{
-    background: theme.palette.primary.main,
-    minHeight: '70px',
-    position: 'fixed',
-    zIndex: '999',
-    width: '100%',
-    transform: 'none',
-  },
-  toolbarWrapper: {
-    //background: theme.palette.primary.main,
+  toolbarWrapper:props => ({
+    background: props.scrollActive ? theme.palette.primary.main : 'transparent',
+    transition: 'background-color 0.5s',
     position: 'fixed',
     minWidth: '100%',
     minHeight: '60px',
     paddingTop: '8px',
     zIndex: 1000,
-  },
+  }),
   container: {
     background: 'transparent',
     position: 'relative',
@@ -105,18 +97,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Header() {
-  const classes = useStyles();
-  const trigger = useScrollTrigger();
+  
+  const trigger = useScrollTrigger({
+    threshold: 10,
+    disableHysteresis: true,
+  });
+
+  const classes = useStyles({
+    scrollActive: trigger
+  });
 
   return (
     <>
-      <div>
-        <Zoom in={trigger}>
-          <div role="presentation" className={classes.backgroundToolbarWrapper}>
-          </div>
-        </Zoom>
-      </div>
-      <div className={classes.toolbarWrapper} id='header-home-linea'>
+      <div className={classes.toolbarWrapper} >
         <Container>
           <Grid
             container
