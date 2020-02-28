@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(12),
   },
   titleItem:{
-    fontSize: '1.5em',
-    paddingTop: '1em',
+    fontSize: '2em',
+    paddingTop: '0.5em',
     paddingLeft: '1em',
     color: 'white',
-    textShadow: '0.0em 0.1em 0.1em black',
+    textShadow: '0.1em 0.1em 0.1em black',
   },
   cardMedia:{
       minHeight: 150,
@@ -97,7 +97,8 @@ function Interfaces() {
                             title={item.title}>
                             <Typography gutterBottom className={classes.titleItem}
                                 variant="h5" component="h2">
-                                <i className={`fa fa-${item.icon}`}></i> &nbsp; {item.title}
+                                {/* <i className={`fa fa-${item.icon}`}></i> &nbsp;  */}
+                                {item.title}
                             </Typography>
                         </CardMedia>
                         <CardContent>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -25,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
     },
     supporters:{
-      paddingBottom: '15px',
-    }
+      paddingBottom: '20px!important;',
+      backgroundColor: '#fff',
+    },
 }));
 
 function Patrocinadores() {
@@ -36,7 +36,7 @@ function Patrocinadores() {
     {
       id: 1,
       title: 'CAPES',
-      image: 'capes-136x136.png'
+      image: 'capes-logo-aplicacao-horizontal.jpg'
     },
     {
       id: 2,
@@ -45,29 +45,55 @@ function Patrocinadores() {
     },
     {
       id: 3,
-      title: 'Finep',
-      image: 'finep.jpg'
-    },
-    {
-      id: 4,
-      title: 'INCT',
-      image: 'logomarca_INCT.jpg'
-    },
-    {
-      id: 5,
       title: 'FAPERGS',
       image: 'fapergs-300x156.png'
     },
     {
-      id: 6,
+      id: 4,
       title: 'FAPERJ',
       image: 'faperj_logo-1024x431.jpg'
     },
     {
-      id: 7,
+      id: 5,
       title: 'FAPESP',
       image: 'logofapesp.jpg'
-    }
+    },
+    {
+      id: 6,
+      title: 'Finep',
+      image: 'finep.jpg'
+    },
+    {
+      id: 7,
+      title: 'INCT',
+      image: 'logomarca_INCT.jpg'
+    },
+    {
+      id: 8,
+      title: 'INCT e-Universo',
+      image: 'inct_euniverso_logo.png'
+    },
+    {
+      id: 9,
+      title: 'Laboratório Nacional de Computação Científica',
+      image: 'lncc.png'
+    },
+    {
+      id: 10,
+      title: 'Ministério da Ciência, Tecnologia, Inovações e Comunicações',
+      image: 'ministerio_da_ciencia.png'
+    },
+    {
+      id: 11,
+      title: 'Observatório Nacional',
+      image: 'observatorio.jpeg'
+    },
+    {
+      id: 12,
+      title: 'RNP',
+      image: 'rnp.png'
+    },
+    
   ];
 
   // const interfacesHost = process.env.REACT_APP_INTERFACES_HOST;
@@ -89,16 +115,14 @@ function Patrocinadores() {
           {interfaces.map((item) => (
             <Grid key={item.id} item xs={12} sm={3}
             className={classes.supporters}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.sizeCardMedia}
-                    component="img"
-                    alt={item.title}
-                    height="80"
-                    image={`${process.env.PUBLIC_URL}/img/patrocinadores/${item.image}`}
-                    title={item.title}
-                  />
-                </CardActionArea>
+              <CardMedia
+                className={classes.sizeCardMedia}
+                component="img"
+                alt={item.title}
+                height="80"
+                image={`${process.env.PUBLIC_URL}/img/patrocinadores/${item.image}`}
+                title={item.title}
+              />
             </Grid>
           ))}
         </Grid>
