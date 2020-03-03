@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: props.pathname === '/' ? 'transparent' : theme.palette.primary.main,
     height: '80px',
     marginTop: '-72px',
+    marginBottom: '100px',
   }),
 }));
 
@@ -102,13 +103,13 @@ function Header() {
                   <a href="/" className={classes.menuLink}>Home</a>
                 </ListItem>
                 <ListItem>
-                  <Link to="/" className={classes.menuLink}>About us</Link>
+                  <Link to="" className={classes.menuLink}>About us</Link>
                 </ListItem>
                 <ListItem>
                   <Link to="/tutorials" className={classes.menuLink}>Tutorial</Link>
                 </ListItem>
                 <ListItem>
-                  <a href="/" className={classes.menuLink}>Contact</a>
+                  <a href="/contact" className={classes.menuLink}>Contact us</a>
                 </ListItem>
               </List>
             </Grid>

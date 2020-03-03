@@ -35,7 +35,7 @@ function Interfaces() {
     {
       id: 1,
       title: 'Dashboard',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      description: 'DES Science Portal Dashboard.',
       pathname: '/dashboard/',
       icon: 'border-all',
       image: 'des.jpg',
@@ -43,7 +43,7 @@ function Interfaces() {
     {
       id: 2,
       title: 'Portal Monitor',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      description: 'Portal Monitor.',
       pathname: '/monitor/',
       icon: 'television',
       image: 'des2.jpg',
@@ -51,7 +51,7 @@ function Interfaces() {
     {
       id: 3,
       title: 'User Interface',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      description: 'Portal User Interfaces.',
       pathname: '/user-interface/',
       icon: 'flask',
       image: 'des3.jpg',
@@ -59,7 +59,7 @@ function Interfaces() {
     {
       id: 4,
       title: 'My Workspace',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      description: 'Portal My Workspace.',
       pathname: '/my-workspace/',
       icon: 'users',
       image: 'des5.jpg',
@@ -67,7 +67,7 @@ function Interfaces() {
     {
       id: 5,
       title: 'Science Products',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      description: 'Science Products.',
       pathname: '/science-products/',
       icon: 'server',
       image: 'des7.jpg',

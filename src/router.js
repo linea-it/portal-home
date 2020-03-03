@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Tutorials from './components/Tutorials';
+import Contact from './components/Contact';
 
 function Router() {
 
@@ -15,6 +16,7 @@ function Router() {
             <Switch>
                 <Route exact path="/" component={Main} />
                 <Route path="/tutorials" component={Tutorials} />
+                <Route path="/contact" component={Contact} />
             </Switch>
         </BrowserRouter>
     );

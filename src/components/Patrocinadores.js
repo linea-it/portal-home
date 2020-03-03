@@ -13,10 +13,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(12),
         marginBottom: theme.spacing(6),
     },
-        lineHeaderPatrocinadores:{
-        borderColor: '#868686',
-        marginBottom: '20px',
-    },
     sizeCardMedia:{
         width: 'unset',
         display: 'block',
@@ -104,7 +100,7 @@ function Patrocinadores() {
         <Typography variant="h4" align="center" gutterBottom>
         Supporters
         </Typography>
-        <hr className={classes.lineHeaderPatrocinadores} />
+        <hr className={classes.lineHeader} />
         <Grid
           container
           spacing={2}
