@@ -1,32 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import styles from './styles';
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        position: 'relative',
-        zIndex: 2,
-        marginTop: theme.spacing(12),
-        marginBottom: theme.spacing(6),
-    },
-    sizeCardMedia:{
-        width: 'unset',
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-    },
-    supporters:{
-      paddingBottom: '20px!important;',
-      backgroundColor: '#fff',
-    },
-}));
 
 function Patrocinadores() {
-  const classes = useStyles();
+  const classes = styles();
 
   const interfaces = [
     {
@@ -98,9 +79,8 @@ function Patrocinadores() {
     <div className={classes.root}>
       <Container>
         <Typography variant="h4" align="center" gutterBottom>
-        Supporters
+          Supporters
         </Typography>
-        <hr className={classes.lineHeader} />
         <Grid
           container
           spacing={2}
@@ -109,10 +89,9 @@ function Patrocinadores() {
           alignItems="flex-start"
         >
           {interfaces.map((item) => (
-            <Grid key={item.id} item xs={12} sm={3}
-            className={classes.supporters}>
+            <Grid key={item.id} item xs={12} sm={3}>
               <CardMedia
-                className={classes.sizeCardMedia}
+                className={classes.media}
                 component="img"
                 alt={item.title}
                 height="80"

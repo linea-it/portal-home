@@ -1,19 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Particles from 'react-particles-js';
+import styles from './styles';
 
-const useStyles = makeStyles({
-  particlesWrapper: {
-    position: 'absolute',
-    bottom: 0,
-    top: 0,
-    width: '100%',
-    zIndex: 1,
-  },
-});
 
 function Stars() {
-  const classes = useStyles();
+  const classes = styles();
 
   return (
     <Particles
