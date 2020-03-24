@@ -1,16 +1,13 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import Router from './Routes';
+import theme from './themes/MaterialTheme';
 
 function App() {
   return (
-    <>
-      <Header />
-      <div className="App">
-        Hello, World
-      </div>
-      <Footer />
-    </>
+    <MuiThemeProvider theme={theme}>
+      <Router />
+    </MuiThemeProvider>
   );
 }
 
