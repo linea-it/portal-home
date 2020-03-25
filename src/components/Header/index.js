@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -37,7 +38,7 @@ function Header() {
             <Grid item xs={12} sm={2} md={1}>
               <img src={logo} alt="LIneA" className={classes.logo} />
             </Grid>
-            <Grid item xs={12} sm={8} md={5}>
+            <Grid item xs={12} sm={8} md={6}>
               <List className={classes.menuList}>
                 <ListItem>
                   <a href="/" className={classes.menuLink}>Home</a>
@@ -53,7 +54,7 @@ function Header() {
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} sm={2} md={6}>
+            <Grid item xs={12} sm={2} md={5}>
               {/* <Button className={classes.button}>
                 <div className={classes.userWrapper}>
                 <Avatar className={classes.avatar}>MT</Avatar>
