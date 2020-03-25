@@ -16,6 +16,10 @@ const styles = makeStyles((theme) => ({
         zIndex: 2,
         marginTop: '0',
     },
+    table: {
+        margin: 'auto',
+        paddingBottom: 8,
+    },
     logo: {
         maxHeight: 48,
         paddingTop: '8px',
@@ -45,12 +49,30 @@ const styles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             fontSize: 35,
             marginTop: -38,
-            marginLeft: 125,
         },
+        width: 'max-content',
+    },
+    subtitle: {
+        fontFamily: 'Oxanium',
+        textTransform: 'uppercase',
+        fontWeight: 100,
+        marginTop: -30,
+        fontSize: 28,
+        [theme.breakpoints.up('sm')]: {
+            fontSize: 35,
+            marginTop: -38,
+        },
+        paddingTop: 8,
+        margin: 'auto',
+        width: 'max-content',
+    },
+    positionTitle: {
+        paddingTop: '8%',
+
     },
     desLogo: {
         [theme.breakpoints.up('sm')]: {
-            maxWidth: 600,
+            maxWidth: 150,
         },
         maxWidth: '100%',
     },
