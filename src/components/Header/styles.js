@@ -3,13 +3,18 @@ import { deepOrange } from '@material-ui/core/colors';
 
 
 const styles = makeStyles((theme) => ({
-  toolbarWrapper: (props) => ({
-    background: props.scrollActive ? theme.palette.primary.main : 'transparent',
-    transition: 'background-color 0.5s',
-    position: 'fixed',
-    minWidth: '100%',
-    minHeight: '60px',
-    zIndex: 1000,
+
+
+  toolbarWrapper: () => ({
+    background: theme.palette.primary.main,
+    [theme.breakpoints.up('md')]: (props) => ({
+      transition: 'background-color 0.5s',
+      background: props.scrollActive ? theme.palette.primary.main : 'transparent',
+      position: 'fixed',
+      minWidth: '100%',
+      minHeight: '60px',
+      zIndex: 1000,
+    }),
   }),
   container: {
     background: 'transparent',
@@ -52,10 +57,13 @@ const styles = makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepOrange[500]),
     backgroundColor: deepOrange[500],
   },
-  backgroundHeader:(props) => ({
-    backgroundColor: props.pathname === '/' ? 'transparent' : theme.palette.primary.main,
-    height: '80px',
-    marginTop: '-72px',
+  backgroundHeader: () => ({
+    backgroundColor: theme.palette.primary.main,
+    [theme.breakpoints.up('md')]: (props) => ({
+      backgroundColor: props.pathname === '/' ? 'transparent' : theme.palette.primary.main,
+      height: '80px',
+      marginTop: '-72px',
+    }),
   }),
 }));
 
