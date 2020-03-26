@@ -9,7 +9,9 @@ const styles = makeStyles((theme) => ({
         marginBottom: theme.spacing(12),
     },
     titleItem:{
-        fontSize: '2em',
+        fontFamily: 'Oxanium',
+        textTransform: 'uppercase',
+        fontSize: '1.7em',
         paddingTop: '0.5em',
         paddingLeft: '1em',
         color: 'white',
