@@ -1,19 +1,15 @@
-/* eslint-disable react/jsx-closing-bracket-location */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { Link, useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import logo from '../../assets/img/linea.png';
 import styles from './styles';
 
 function Header() {
-
   const location = useLocation();
-  
   const trigger = useScrollTrigger({
     threshold: 10,
     disableHysteresis: true,
@@ -26,7 +22,7 @@ function Header() {
 
   return (
     <>
-      <div className={classes.toolbarWrapper} >
+      <div className={classes.toolbarWrapper}>
         <Container>
           <Grid
             container
@@ -45,13 +41,14 @@ function Header() {
                   <a href="/" className={classes.menuLink}>Home</a>
                 </ListItem>
                 <ListItem>
-                  <Link
+                  <a
+                    href="https://www.linea.gov.br/"
                     className={classes.menuLink}
-                    onClick={() => {
-                      window.open('https://www.linea.gov.br/', '_blank ')
-                    }}>
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     About us
-                  </Link>
+                  </a>
                 </ListItem>
                 {/* <ListItem>
                   <Link to="/tutorials" className={classes.menuLink}>Tutorial</Link>
@@ -73,7 +70,7 @@ function Header() {
             </Grid>
           </Grid>
         </Container>
-        <div className={classes.backgroundHeader}></div>
+        <div className={classes.backgroundHeader} />
       </div>
     </>
   );

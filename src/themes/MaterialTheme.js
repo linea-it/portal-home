@@ -24,7 +24,7 @@ const theme = createMuiTheme({
   },
   initContainer: {
     paddingTop: 120,
-  }
+  },
 });
 
 export default theme;

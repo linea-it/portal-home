@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import { Container, Typography, Grid } from '@material-ui/core';
 import Modal from '@material-ui/core/Modal';
@@ -9,22 +9,16 @@ import styles from './styles';
 
 function Tutorials() {
   const classes = styles();
-  const [open, setOpen] = React.useState(false);
-  const [idPlayerPrincipal, setIdPlayerPrincipal]= React.useState('');
+  const [open, setOpen] = useState(false);
+  const [idPlayer, setIdPlayer] = useState('');
 
-  const idsTutorials = ['zIVtZ8IYmOU','vNuggkko5zI','ZQgH2wWDIbg','3eh6r4ysiFY']
-  const opts = { height: '200', width: '250' }
-  const optsPrincipal = { height: '720', width: '1024', }
+  const idsTutorials = ['zIVtZ8IYmOU', 'vNuggkko5zI', 'ZQgH2wWDIbg', '3eh6r4ysiFY'];
+  const opts = { height: '200', width: '250' };
+  const optsDefault = { height: '720', width: '1024' };
 
-  const _onPlay = (event) => {
-    setIdPlayerPrincipal(event.target.l.videoData.video_id);
-    event.target.stopVideo();
-    handleOpen();
-  }
-
-  const _onReadyPrincipal = (event) => {
-    event.target.loadVideoById(idPlayerPrincipal);
-  } 
+  const onReady = (event) => {
+    event.target.loadVideoById(idPlayer);
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -33,6 +27,13 @@ function Tutorials() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const onPlay = (event) => {
+    setIdPlayer(event.target.l.videoData.video_id);
+    event.target.stopVideo();
+    handleOpen();
+  };
+
 
   return (
     <div className={classes.initContainer}>
@@ -47,19 +48,19 @@ function Tutorials() {
           justify="space-evenly"
           alignItems="flex-start"
         >
-          {idsTutorials.map((idTutorial, key) => (
-              <Grid key={key} item xs={6} sm={2}>
-                <YouTube
-                  videoId={idTutorial}
-                  opts={opts}
-                  onPlay={_onPlay}
-                />
-              </Grid>
+          {idsTutorials.map((idTutorial) => (
+            <Grid key={idTutorial} item xs={6} sm={2}>
+              <YouTube
+                videoId={idTutorial}
+                opts={opts}
+                onPlay={onPlay}
+              />
+            </Grid>
           ))}
 
         </Grid>
       </Container>
-      
+
 
       <Modal
         aria-labelledby="transition-modal-title"
@@ -75,11 +76,11 @@ function Tutorials() {
       >
         <Fade in={open}>
           <div>
-              <YouTube
-                  opts={optsPrincipal}
-                  videoId={idPlayerPrincipal}
-                  onReady={_onReadyPrincipal}
-              />
+            <YouTube
+              opts={optsDefault}
+              videoId={idPlayer}
+              onReady={onReady}
+            />
           </div>
         </Fade>
       </Modal>
