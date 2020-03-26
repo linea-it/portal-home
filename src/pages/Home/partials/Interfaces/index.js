@@ -22,7 +22,7 @@ function Interfaces() {
     },
     {
       id: 2,
-      title: 'Portal Monitor',
+      title: 'Job Monitor',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/monitor/',
       icon: 'television',
@@ -58,40 +58,45 @@ function Interfaces() {
 
   return (
     <div className={classes.root}>
-    <Container>
+      <Container>
         <Grid
-            container
-            spacing={3}
-            direction="row"
-            justify="center"
-            alignItems="center"
-            >
-            {interfaces.map((item) => (
+          container
+          spacing={3}
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
+          {interfaces.map((item) => (
             <Grid key={item.id} item xs={12} sm={6} md={4}>
-                <Card>    
-                    <CardActionArea href={interfacesHost + item.pathname}>
-                        <CardMedia
-                            alt={item.title}
-                            className={classes.media}
-                            image={`${process.env.PUBLIC_URL}/img/${item.image}`}
-                            title={item.title}>
-                            <Typography gutterBottom className={classes.titleItem}
-                                variant="h5" component="h2">
-                                {/* <i className={`fa fa-${item.icon}`}></i> &nbsp;  */}
-                                {item.title}
-                            </Typography>
-                        </CardMedia>
-                        <CardContent>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {item.description}
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                </Card>
+              <Card>
+                <CardActionArea href={interfacesHost + item.pathname}>
+                  <CardMedia
+                    alt={item.title}
+                    className={classes.media}
+                    image={`${process.env.PUBLIC_URL}/img/${item.image}`}
+                    title={item.title}
+                  >
+                    <Typography
+                      gutterBottom
+                      className={classes.titleItem}
+                      variant="h5"
+                      component="h2"
+                    >
+                      {/* <i className={`fa fa-${item.icon}`}></i> &nbsp;  */}
+                      {item.title}
+                    </Typography>
+                  </CardMedia>
+                  <CardContent>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      {item.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Grid>
-            ))}
+          ))}
         </Grid>
-    </Container>
+      </Container>
     </div>
   );
 }

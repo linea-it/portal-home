@@ -1,18 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import logo from '../../assets/img/linea.png';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { Link, useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import logo from '../../assets/img/linea.png';
 import styles from './styles';
 
 function Header() {
-
-  let location = useLocation();
-  
+  const location = useLocation();
   const trigger = useScrollTrigger({
     threshold: 10,
     disableHysteresis: true,
@@ -25,7 +22,7 @@ function Header() {
 
   return (
     <>
-      <div className={classes.toolbarWrapper} >
+      <div className={classes.toolbarWrapper}>
         <Container>
           <Grid
             container
@@ -38,23 +35,30 @@ function Header() {
             <Grid item xs={12} sm={2} md={1}>
               <img src={logo} alt="LIneA" className={classes.logo} />
             </Grid>
-            <Grid item xs={12} sm={8} md={6}>
+            <Grid item xs={12} sm={8} md={5}>
               <List className={classes.menuList}>
                 <ListItem>
                   <a href="/" className={classes.menuLink}>Home</a>
                 </ListItem>
                 <ListItem>
-                  <Link to="" className={classes.menuLink}>About us</Link>
+                  <a
+                    href="https://www.linea.gov.br/"
+                    className={classes.menuLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    About us
+                  </a>
                 </ListItem>
-                <ListItem>
+                {/* <ListItem>
                   <Link to="/tutorials" className={classes.menuLink}>Tutorial</Link>
-                </ListItem>
+                </ListItem> */}
                 <ListItem>
                   <a href="/contact" className={classes.menuLink}>Contact us</a>
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} sm={2} md={5}>
+            <Grid item xs={12} sm={2} md={6}>
               {/* <Button className={classes.button}>
                 <div className={classes.userWrapper}>
                 <Avatar className={classes.avatar}>MT</Avatar>
@@ -66,7 +70,7 @@ function Header() {
             </Grid>
           </Grid>
         </Container>
-        <div className={classes.backgroundHeader}></div>
+        <div className={classes.backgroundHeader} />
       </div>
     </>
   );
