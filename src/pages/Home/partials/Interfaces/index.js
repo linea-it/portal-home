@@ -22,7 +22,7 @@ function Interfaces() {
     },
     {
       id: 2,
-      title: 'Portal Monitor',
+      title: 'Job Monitor',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/monitor/',
       icon: 'television',
