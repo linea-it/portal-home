@@ -1,11 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles((theme) => ({
-  initContainer: theme.initContainer,
-  textFields: {
-    marginBottom: theme.spacing(4),
+  root: {
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(12),
   },
-  grid: {
+  media: {
+    width: 'auto',
     margin: 'auto',
   },
 }));

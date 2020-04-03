@@ -24,7 +24,12 @@ function Banner() {
               <tbody>
                 <tr>
                   <td>
-                    <img src={logo} alt="LIneA" className={classes.desLogo} />
+                    <img
+                      onClick={() => { window.open("https://www.w3schools.com", '_blanc'); }}
+                      src={logo}
+                      alt="LIneA"
+                      className={classes.desLogo}
+                    />
                   </td>
                   <td className={classes.positionTitle}>
                     <h1 className={classes.title}>
@@ -40,7 +45,12 @@ function Banner() {
             </table>
             <Grid item xs={12} sm={10} md={8} className={classes.descriptionWrapper}>
               <Typography variant="body2" component="p">
-                An international, collaborative effort to map hundreds of millions of galaxies, detect thousands of supernovae, and find patterns of cosmic structure that will reveal the nature of the mysterious dark energy that is accelerating the expansion of our Universe. DES began searching the Southern skies on August 31, 2013.
+                An international, collaborative effort to map hundreds of millions of galaxies,
+                detect thousands of supernovae,
+                and find patterns of cosmic structure
+                that will reveal the nature of the mysterious dark energy
+                that is accelerating the expansion of our Universe.
+                DES began searching the Southern skies on August 31, 2013.
               </Typography>
             </Grid>
           </Grid>

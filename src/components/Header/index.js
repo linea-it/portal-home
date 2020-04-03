@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-closing-bracket-location */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -45,9 +43,9 @@ function Header() {
                 <ListItem>
                   {/* <Link
                     className={classes.menuLink}
-                    onClick={() => {
-                      window.open('https://www.linea.gov.br/', '_blank ')
-                    }}>
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     About us
                   </Link> */}
                   <ListItem>
