@@ -6,14 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { Link, useLocation} from 'react-router-dom';
-import logo from '../../assets/img/linea.png';
+import { useLocation } from 'react-router-dom';
+// import logo from '../../assets/img/linea.png';
 import styles from './styles';
 
 function Header() {
-
   const location = useLocation();
-  
   const trigger = useScrollTrigger({
     threshold: 10,
     disableHysteresis: true,
@@ -26,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <div className={classes.toolbarWrapper} >
+      <div className={classes.toolbarWrapper}>
         <Container>
           <Grid
             container
@@ -36,22 +34,25 @@ function Header() {
             spacing={0}
             className={classes.container}
           >
-            <Grid item xs={12} sm={2} md={1}>
+            {/* <Grid item xs={12} sm={2} md={1}>
               <img src={logo} alt="LIneA" className={classes.logo} />
-            </Grid>
-            <Grid item xs={12} sm={8} md={5}>
+            </Grid> */}
+            <Grid item xs={12} sm={8} md={6}>
               <List className={classes.menuList}>
                 <ListItem>
                   <a href="/" className={classes.menuLink}>Home</a>
                 </ListItem>
                 <ListItem>
-                  <Link
+                  {/* <Link
                     className={classes.menuLink}
                     onClick={() => {
                       window.open('https://www.linea.gov.br/', '_blank ')
                     }}>
                     About us
-                  </Link>
+                  </Link> */}
+                  <ListItem>
+                    <a href="/about-us" className={classes.menuLink}>About us</a>
+                  </ListItem>
                 </ListItem>
                 {/* <ListItem>
                   <Link to="/tutorials" className={classes.menuLink}>Tutorial</Link>
@@ -73,7 +74,7 @@ function Header() {
             </Grid>
           </Grid>
         </Container>
-        <div className={classes.backgroundHeader}></div>
+        <div className={classes.backgroundHeader} />
       </div>
     </>
   );
