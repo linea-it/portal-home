@@ -1,12 +1,37 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable max-len */
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import { Twitter, Facebook } from '@material-ui/icons';
 import logo from '../../assets/img/linea.png';
 import styles from './styles';
 
 function Banner() {
   const classes = styles();
+
+  const handlerClick = (socialMedia) => {
+    let uri = '';
+    switch (socialMedia) {
+      case 'YouTube':
+        uri = 'https://www.youtube.com/user/lineamcti';
+        break;
+      case 'Facebook':
+        uri = 'https://www.facebook.com/linea.mcti';
+        break;
+      case 'Twitter':
+        uri = 'https://twitter.com/LIneA_mcti';
+        break;
+      case 'GitHub':
+        uri = 'https://github.com/linea-it/dri';
+        break;
+      default:
+        uri = 'https://www.youtube.com/user/lineamcti';
+    }
+    window.open(uri, '_blank');
+  };
 
   return (
     <>
@@ -25,7 +50,7 @@ function Banner() {
                 <tr>
                   <td>
                     <img
-                      onClick={() => { window.open("https://www.w3schools.com", '_blanc'); }}
+                      onClick={() => { window.open('https://linea.gov.br', '_blanc'); }}
                       src={logo}
                       alt="LIneA"
                       className={classes.desLogo}
@@ -37,7 +62,7 @@ function Banner() {
                     </h1>
                     <h2 className={classes.subtitle}>
                       Science Portal
-                      <img src={`${process.env.PUBLIC_URL}/img/des-logo.png`} alt="The Dark Energy Survey" className={classes.logo} />
+                      {/* <img src={`${process.env.PUBLIC_URL}/img/des-logo.png`} alt="The Dark Energy Survey" className={classes.logo} /> */}
                     </h2>
                   </td>
                 </tr>
@@ -54,6 +79,33 @@ function Banner() {
               </Typography>
             </Grid>
           </Grid>
+          <div className={classes.floarRight}>
+            <div className={classes.separatorToolBar} />
+            <IconButton
+              onClick={() => { handlerClick('Facebook'); }}
+              color="inherit"
+              aria-label="Facebook"
+              component="span"
+            >
+              <Facebook />
+            </IconButton>
+            <IconButton
+              onClick={() => { handlerClick('Twitter'); }}
+              color="inherit"
+              aria-label="Twitter"
+              component="span"
+            >
+              <Twitter />
+            </IconButton>
+            {/* <IconButton
+              onClick={() => { handlerClick('GitHub'); }}
+              color="inherit"
+              aria-label="GitHub"
+              component="span"
+            >
+              <GitHub />
+            </IconButton> */}
+          </div>
         </Grid>
       </div>
     </>

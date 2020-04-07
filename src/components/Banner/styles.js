@@ -75,6 +75,7 @@ const styles = makeStyles((theme) => ({
       maxWidth: 150,
     },
     maxWidth: '100%',
+    cursor: 'pointer',
   },
   titleWrapper: {
     [theme.breakpoints.up('sm')]: {
@@ -90,6 +91,11 @@ const styles = makeStyles((theme) => ({
     cursor: 'pointer',
     color: theme.palette.getContrastText(deepOrange[500]),
     backgroundColor: deepOrange[500],
+  },
+  floarRight: {
+    width: '100%',
+    textAlign: 'right',
+    paddingRight: 40,
   },
 }));
 
