@@ -5,7 +5,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { useLocation } from 'react-router-dom';
-// import logo from '../../assets/img/linea.png';
 import styles from './styles';
 
 function Header() {
@@ -32,25 +31,13 @@ function Header() {
             spacing={0}
             className={classes.container}
           >
-            {/* <Grid item xs={12} sm={2} md={1}>
-              <img src={logo} alt="LIneA" className={classes.logo} />
-            </Grid> */}
             <Grid item xs={12} sm={8} md={6}>
               <List className={classes.menuList}>
                 <ListItem>
                   <a href="/" className={classes.menuLink}>Home</a>
                 </ListItem>
                 <ListItem>
-                  {/* <Link
-                    className={classes.menuLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    About us
-                  </Link> */}
-                  <ListItem>
-                    <a href="/about-us" className={classes.menuLink}>About us</a>
-                  </ListItem>
+                  <a href="/about-us" className={classes.menuLink}>About us</a>
                 </ListItem>
                 {/* <ListItem>
                   <Link to="/tutorials" className={classes.menuLink}>Tutorial</Link>
