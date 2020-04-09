@@ -11,19 +11,9 @@ function Supporters() {
 
   const interfaces = [
     {
-      id: 1,
-      title: 'CAPES',
-      image: 'capes-logo-aplicacao-horizontal.jpg',
-    },
-    {
       id: 2,
       title: 'CNPq',
       image: 'cnpq_logo.jpg',
-    },
-    {
-      id: 3,
-      title: 'FAPERGS',
-      image: 'fapergs-300x156.png',
     },
     {
       id: 4,
@@ -31,25 +21,35 @@ function Supporters() {
       image: 'faperj_logo-1024x431.jpg',
     },
     {
-      id: 5,
-      title: 'FAPESP',
-      image: 'logofapesp.jpg',
-    },
-    {
       id: 6,
       title: 'Finep',
       image: 'finep.jpg',
     },
+    // {
+    //   id: 1,
+    //   title: 'CAPES',
+    //   image: 'capes-logo-aplicacao-horizontal.jpg',
+    // },
+    // {
+    //   id: 3,
+    //   title: 'FAPERGS',
+    //   image: 'fapergs-300x156.png',
+    // },
+    // {
+    //   id: 5,
+    //   title: 'FAPESP',
+    //   image: 'logofapesp.jpg',
+    // },
     {
       id: 7,
       title: 'INCT',
       image: 'logomarca_INCT.jpg',
     },
-    {
-      id: 8,
-      title: 'INCT e-Universo',
-      image: 'inct_euniverso_logo.png',
-    },
+    // {
+    //   id: 8,
+    //   title: 'INCT e-Universo',
+    //   image: 'inct_euniverso_logo.png',
+    // },
     {
       id: 9,
       title: 'Laboratório Nacional de Computação Científica',
@@ -78,8 +78,8 @@ function Supporters() {
   return (
     <div className={classes.root}>
       <Container>
-        <Typography variant="h4" align="center" gutterBottom>
-          Supporters
+        <Typography variant="h6" align="center" gutterBottom>
+          LIneA is supported by
         </Typography>
         <Grid
           container

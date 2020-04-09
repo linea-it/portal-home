@@ -13,12 +13,12 @@ function Interfaces() {
 
   const interfaces = [
     {
-      id: 1,
-      title: 'Dashboard',
+      id: 0,
+      title: 'Pipelines',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
-      pathname: '/dashboard/',
+      url: 'https://testing.linea.gov.br/',
       icon: 'border-all',
-      image: 'des.jpg',
+      image: 'des6.jpg',
     },
     {
       id: 2,
@@ -29,14 +29,6 @@ function Interfaces() {
       image: 'des2.jpg',
     },
     {
-      id: 3,
-      title: 'User Interface',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
-      pathname: '/user-interface/',
-      icon: 'flask',
-      image: 'des3.jpg',
-    },
-    {
       id: 4,
       title: 'My Workspace',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
@@ -45,12 +37,28 @@ function Interfaces() {
       image: 'des5.jpg',
     },
     {
+      id: 1,
+      title: 'Dashboard',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/dashboard/',
+      icon: 'border-all',
+      image: 'des.jpg',
+    },
+    {
       id: 5,
       title: 'Science Products',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
       pathname: '/science-products/',
       icon: 'server',
       image: 'des7.jpg',
+    },
+    {
+      id: 3,
+      title: 'For Developers',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim consequat nibh, eu congue massa. Cras at placerat neque.',
+      pathname: '/user-interface/',
+      icon: 'flask',
+      image: 'des3.jpg',
     },
   ];
 
@@ -69,7 +77,10 @@ function Interfaces() {
           {interfaces.map((item) => (
             <Grid key={item.id} item xs={12} sm={6} md={4}>
               <Card>
-                <CardActionArea href={interfacesHost + item.pathname}>
+                <CardActionArea
+                  href={item.url || interfacesHost + item.pathname}
+                  target={item.url ? '_blanc' : '_self'}
+                >
                   <CardMedia
                     alt={item.title}
                     className={classes.media}
