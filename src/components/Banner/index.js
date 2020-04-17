@@ -82,7 +82,7 @@ function Banner() {
               </Typography>
             </Grid>
           </Grid>
-          <div className={classes.floarRight}>
+          <div className={classes.floatRight}>
             <div className={classes.separatorToolBar} />
             <IconButton
               onClick={() => { handlerClick('Facebook'); }}
