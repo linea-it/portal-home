@@ -15,6 +15,7 @@ const styles = makeStyles((theme) => ({
     color: '#FFF',
     zIndex: 2,
     marginTop: '0',
+    display: 'block',
   },
   table: {
     margin: 'auto',
