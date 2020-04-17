@@ -93,10 +93,11 @@ const styles = makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepOrange[500]),
     backgroundColor: deepOrange[500],
   },
-  floarRight: {
-    width: '100%',
+  floatRight: {
     textAlign: 'right',
     paddingRight: 40,
+    position: 'relative',
+    zIndex: 2,
   },
 }));
 
