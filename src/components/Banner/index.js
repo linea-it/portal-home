@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { Twitter, Facebook } from '@material-ui/icons';
 import logo from '../../assets/img/linea.png';
 import styles from './styles';
+import Stars from '../Stars';
 
 function Banner() {
   const classes = styles();
@@ -44,6 +45,8 @@ function Banner() {
           spacing={3}
           className={classes.container}
         >
+          <Stars />
+
           <Grid item xs={12} className={classes.titleWrapper}>
             <table className={classes.table}>
               <tbody>
