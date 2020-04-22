@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { Twitter, Facebook } from '@material-ui/icons';
-import logo from '../../assets/img/linea1.png';
+import logo from '../../assets/img/linea-dark-invert.png';
 import styles from './styles';
-import Stars from '../Stars';
+// import Stars from '../Stars';
 
 function Banner() {
   const classes = styles();

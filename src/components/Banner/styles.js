@@ -23,9 +23,8 @@ const styles = makeStyles((theme) => ({
     paddingBottom: 8,
   },
   logo: {
-    maxHeight: 25,
+    maxHeight: 50,
     paddingLeft: '8px',
-    webkitFilter: 'drop-shadow(5px 5px 5px #222)',
   },
   particlesWrapper: {
     position: 'absolute',
@@ -75,7 +74,7 @@ const styles = makeStyles((theme) => ({
   },
   desLogo: {
     [theme.breakpoints.up('sm')]: {
-      maxWidth: 150,
+      maxWidth: 180,
     },
     maxWidth: '100%',
     cursor: 'pointer',
