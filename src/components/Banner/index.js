@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { Twitter, Facebook } from '@material-ui/icons';
-import logo from '../../assets/img/linea.png';
+import logo from '../../assets/img/linea1.png';
 import styles from './styles';
 import Stars from '../Stars';
 
@@ -45,7 +45,7 @@ function Banner() {
           spacing={3}
           className={classes.container}
         >
-          <Stars />
+          {/* <Stars /> */}
 
           <Grid item xs={12} className={classes.titleWrapper}>
             <table className={classes.table}>
