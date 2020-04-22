@@ -3,9 +3,10 @@ import { deepOrange } from '@material-ui/core/colors';
 
 const styles = makeStyles((theme) => ({
   root: {
-    background: `url(${process.env.PUBLIC_URL}/img/des5.jpg)`,
+    background: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     paddingTop: '40px',
   },
   container: {
@@ -24,6 +25,7 @@ const styles = makeStyles((theme) => ({
   logo: {
     maxHeight: 25,
     paddingLeft: '8px',
+    webkitFilter: 'drop-shadow(5px 5px 5px #222)',
   },
   particlesWrapper: {
     position: 'absolute',
