@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable max-len */
 import React from 'react';
 import {
-  Grid, Container, Typography,
+  Grid, Container, Typography, Breadcrumbs, Link,
 } from '@material-ui/core';
 import styles from './styles';
 
@@ -14,42 +15,28 @@ function AboutUs() {
       <Container>
         <Grid
           item
-          xs={9}
+          xs={12}
           className={classes.grid}
         >
-          <Typography variant="h4" align="center" gutterBottom>
-            About LIneA
-          </Typography>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/">
+              Home
+            </Link>
+            <Typography color="textPrimary">About us</Typography>
+          </Breadcrumbs>
           <Typography
             gutterBottom
             className={classes.textFormat}
             variant="overline"
             component="h2"
           >
-            <div>
-              <p>
-                <span>
-                  The Laboratório Interinstitucional de e-Astronomia (LIneA) was created in November 2010 by an agreement signed by three research institutes of the Ministry of Science, Technology, Innovation and Communication (
-                  <a href="http://www.mctic.gov.br/">MCTIC</a>
-                  ) (
-                  <a href="http://www.lncc.br/">Laboratório Nacional de Computação Científica</a>
-                  ,
-                  {' '}
-                  <a href="http://on.br/">Observatório Nacional</a>
-                  , &nbsp;e &nbsp;
-                  <a href="https://www.rnp.br/">Rede Nacional de Ensino e Pesquisa</a>
-                  ) to provide support for the participation of Brazilian scientists in large international programs requiring an IT infrastructure such as SDSS, DES, DESI and LSST. Some of its main projects include:
-                </span>
-              </p>
-              <ol>
-                <li><span>The Quick Reduce pipeline available at CTIO to assess the quality of the images gathered by DECam; </span></li>
-                <li><span>The Science Portal, a comprehensive integrated web-based end-to-end system to streamline the production of ancillary information used to create value-added science ready catalog to feed a variety of science analysis workflows;</span></li>
-                <li><span>The Data Server interface available at Fermilab since April 2014 to enable the visualization of images and objects, and to carry out queries in the DESDM database. The interface has been accessed 4500 times over the past three years by 250 users;</span></li>
-                <li><span>The Quick Look Framework (QLF) being developed to assess the quality of the 15,000 spectra of the 5,000 objects to be observed in each exposure of DESI.</span></li>
-                <li><span>The LIneA Science Server being made available at NCSA and which will be used as one of the interfaces of the DES data release DR1.</span></li>
-              </ol>
-              <p><span>In addition, LIneA maintains a data center (1000 cores processing cluster, 1 PB mass storage and a host of other machines) for its affiliates, currently around 80 members, a mirror site for SDSS providing independent SkyServer and CasJobs services, and provides support to the computer infrastructure being used by the APOGEE-2 project at the Las Campanas Observatory.</span></p>
-            </div>
+            THE LABORATÓRIO INTERINSTITUCIONAL DE E-ASTRONOMIA (LINEA) WAS CREATED IN NOVEMBER 2010 BY AN AGREEMENT SIGNED BY THREE RESEARCH INSTITUTES OF THE MINISTRY OF SCIENCE, TECHNOLOGY, INNOVATION AND COMMUNICATION (MCTIC) (LABORATÓRIO NACIONAL DE COMPUTAÇÃO CIENTÍFICA, OBSERVATÓRIO NACIONAL,  E  REDE NACIONAL DE ENSINO E PESQUISA) TO PROVIDE SUPPORT FOR THE PARTICIPATION OF BRAZILIAN SCIENTISTS IN LARGE INTERNATIONAL PROGRAMS REQUIRING AN IT INFRASTRUCTURE SUCH AS SDSS, DES, DESI AND LSST. SOME OF ITS MAIN PROJECTS INCLUDE:
+            <ul>
+              <li>THE QUICK REDUCE PIPELINE AVAILABLE AT CTIO TO ASSESS THE QUALITY OF THE IMAGES GATHERED BY DECAM;<br />THE SCIENCE PORTAL, A COMPREHENSIVE INTEGRATED WEB-BASED END-TO-END SYSTEM TO STREAMLINE THE PRODUCTION OF ANCILLARY INFORMATION USED TO CREATE VALUE-ADDED SCIENCE READY CATALOG TO FEED A VARIETY OF SCIENCE ANALYSIS WORKFLOWS;</li>
+              <li>THE DATA SERVER INTERFACE AVAILABLE AT FERMILAB SINCE APRIL 2014 TO ENABLE THE VISUALIZATION OF IMAGES AND OBJECTS, AND TO CARRY OUT QUERIES IN THE DESDM DATABASE. THE INTERFACE HAS BEEN ACCESSED 4500 TIMES OVER THE PAST THREE YEARS BY 250 USERS;</li>
+              <li>THE QUICK LOOK FRAMEWORK (QLF) BEING DEVELOPED TO ASSESS THE QUALITY OF THE 15,000 SPECTRA OF THE 5,000 OBJECTS TO BE OBSERVED IN EACH EXPOSURE OF DESI.<br />THE LINEA SCIENCE SERVER BEING MADE AVAILABLE AT NCSA AND WHICH WILL BE USED AS ONE OF THE INTERFACES OF THE DES DATA RELEASE DR1.</li>
+              <li>IN ADDITION, LINEA MAINTAINS A DATA CENTER (1000 CORES PROCESSING CLUSTER, 1 PB MASS STORAGE AND A HOST OF OTHER MACHINES) FOR ITS AFFILIATES, CURRENTLY AROUND 80 MEMBERS, A MIRROR SITE FOR SDSS PROVIDING INDEPENDENT SKYSERVER AND CASJOBS SERVICES, AND PROVIDES SUPPORT TO THE COMPUTER INFRASTRUCTURE BEING USED BY THE APOGEE-2 PROJECT AT THE LAS CAMPANAS OBSERVATORY.</li>
+            </ul>
           </Typography>
         </Grid>
       </Container>
