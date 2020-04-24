@@ -17,6 +17,7 @@ const styles = makeStyles((theme) => ({
     paddingLeft: '1em',
     color: 'white',
     textShadow: '0.1em 0.1em 0.1em black',
+    overflowWrap: 'break-word',
   },
   media: {
     minHeight: 150,
