@@ -22,6 +22,21 @@ const styles = makeStyles((theme) => ({
   media: {
     minHeight: 150,
   },
+  cardContent: {
+    height: 70,
+    paddingBottom: 0,
+  },
+  description: {
+    display: '-webkit-box',
+    '-webkit-line-clamp': 3,
+    '-webkit-box-orient': 'vertical',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  dialogCard: {
+    zIndex: 9999,
+    height: 28,
+  },
 }));
 
 export default styles;

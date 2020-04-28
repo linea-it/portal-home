@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -6,7 +8,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import CardActions from '@material-ui/core/CardActions';
 import styles from './styles';
+import DialogCard from '../ModalInterfaces';
 
 function Interfaces() {
   const classes = styles();
@@ -15,8 +19,8 @@ function Interfaces() {
     {
       id: 0,
       title: 'Datasets',
-      description: 'Interface showing all datasets available for use by pipelines in the portal showing DES data releases, external datasets  and simulations.',
-      url: '/',
+      description: 'Interface showing all datasets available for use by pipelines in the portal showing DES data releases, external datasets  and simulations',
+      pathname: '/dataset/',
       icon: 'border-all',
       image: 'des8.jpg',
     },
@@ -39,7 +43,7 @@ function Interfaces() {
     {
       id: 3,
       title: 'My Workspace',
-      description: 'Interface that allows the user to monitor all of his/her jobs and for completed jobs access the results. The interface also allows the user to: 1)  save; 2) share the results with a person or a group; 3) publish enabling access to all collaboration members in the DES Science products interface;  and 4)  to  make a product widely public in the LIneA Science products interface to give access to the general public',
+      description: 'Interface that allows the user to monitor all of his/her jobs and for completed jobs access the results. The interface also allows the user to: 1)  save; 2) share the results with a person or a group; 3) publish enabling access to all collaboration members in the DES Science products interface;  and 4)  to  make a product widely public in the LIneA Science products interface to give access to the general public.',
       pathname: '/my-workspace/',
       icon: 'users',
       image: 'des5.jpg',
@@ -47,7 +51,7 @@ function Interfaces() {
     {
       id: 4,
       title: 'Dashboard',
-      description: 'Interface showing all completed processes given a data release and a dataset. It lists all enabled pipelines. The information of the last run and provides access to all previous executions of a given pipeline. It is through this interface that the provenance of products can be traced. ',
+      description: 'Interface showing all completed processes given a data release and a dataset. It lists all enabled pipelines. The information of the last run and provides access to all previous executions of a given pipeline. It is through this interface that the provenance of products can be traced.',
       pathname: '/dashboard/',
       icon: 'border-all',
       image: 'des.jpg',
@@ -68,14 +72,14 @@ function Interfaces() {
       icon: 'flask',
       image: 'des9.jpg',
     },
-    {
-      id: 7,
-      title: 'My Profile',
-      description: 'Information about the user providing details about role, permissions and groups that the user is part.',
-      pathname: '/user-interface/',
-      icon: 'flask',
-      image: 'des3.jpg',
-    },
+    // {
+    //   id: 7,
+    //   title: 'My Profile',
+    //   description: 'Information about the user providing details about role, permissions and groups that the user is part.',
+    //   pathname: '/user-interface/',
+    //   icon: 'flask',
+    //   image: 'des3.jpg',
+    // },
     {
       id: 8,
       title: 'Documentation Tutorials',
@@ -121,12 +125,15 @@ function Interfaces() {
                       {item.title}
                     </Typography>
                   </CardMedia>
-                  <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                  <CardContent className={classes.cardContent}>
+                    <Typography variant="body2" color="textSecondary" component="div" className={classes.description}>
                       {item.description}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
+                <CardActions className={classes.dialogCard}>
+                  {item.description.length > 124 ? <DialogCard item={item} /> : '' }
+                </CardActions>
               </Card>
             </Grid>
           ))}
