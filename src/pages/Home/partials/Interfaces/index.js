@@ -20,7 +20,7 @@ function Interfaces() {
       id: 0,
       title: 'Datasets',
       description: 'Interface showing all datasets available for use by pipelines in the portal showing DES data releases, external datasets  and simulations',
-      pathname: '/dataset/',
+      pathname: '/user-interface/datasets',
       icon: 'border-all',
       image: 'des8.jpg',
     },
