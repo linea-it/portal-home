@@ -8,6 +8,11 @@ const styles = makeStyles((theme) => ({
   grid: {
     margin: 'auto',
   },
+  form: {
+    marginTop: 40,
+    margin: 'auto',
+    width: '80%',
+  },
 }));
 
 export default styles;

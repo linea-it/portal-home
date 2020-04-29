@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Grid, Container, Typography, TextField, Button,
+  Grid, Container, Typography, TextField, Button, Breadcrumbs, Link,
 } from '@material-ui/core';
 import EmailIcon from '@material-ui/icons/Email';
 import styles from './styles';
@@ -28,15 +28,19 @@ function Contact() {
       <Container>
         <Grid
           item
-          xs={6}
+          xs={12}
           className={classes.grid}
         >
-          <Typography variant="h4" align="center" gutterBottom>
-            Contact us
-          </Typography>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/">
+              Home
+            </Link>
+            <Typography color="textPrimary">Contact us</Typography>
+          </Breadcrumbs>
           <form
             autoComplete="off"
             onSubmit={handleSubmit}
+            className={classes.form}
           >
 
             <div className={classes.textFields}>

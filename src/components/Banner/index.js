@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { Twitter, Facebook } from '@material-ui/icons';
-import logo from '../../assets/img/linea1.png';
+import logo from '../../assets/img/linea-dark-invert.png';
 import styles from './styles';
-import Stars from '../Stars';
+// import Stars from '../Stars';
 
 function Banner() {
   const classes = styles();
@@ -73,12 +73,7 @@ function Banner() {
             </table>
             <Grid item xs={12} sm={10} md={8} className={classes.descriptionWrapper}>
               <Typography variant="body2" component="p">
-                An international, collaborative effort to map hundreds of millions of galaxies,
-                detect thousands of supernovae,
-                and find patterns of cosmic structure
-                that will reveal the nature of the mysterious dark energy
-                that is accelerating the expansion of our Universe.
-                DES began searching the Southern skies on August 31, 2013.
+                The DES Science Portal is a platform developed for the Dark Energy Survey project. It hosts a variety of pipelines meant to prepare science-ready catalogs for different science applications as well as to carry out a variety of scientific analysis. The pipelines are grouped in stages that include data preparation where maps are created, objects are classified as star/galaxy and photo-zs are computed;   generation of value–added catalog;   creation of special samples; science workflows for different working groups and utilities. One of the main strengths of the system is the ability to provide complete information of all executed processes enabling the user to trace the input, configuration, the version of the codes used and the results obtained in the form of a product log with plots. The portal also provides access to a number of tools designed for the user, the developer and the administrator.
               </Typography>
             </Grid>
           </Grid>

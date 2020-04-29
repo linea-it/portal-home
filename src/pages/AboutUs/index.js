@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable max-len */
 import React from 'react';
 import {
-  Grid, Container, Typography,
+  Grid, Container, Typography, Breadcrumbs, Link,
 } from '@material-ui/core';
 import styles from './styles';
 
@@ -14,42 +15,41 @@ function AboutUs() {
       <Container>
         <Grid
           item
-          xs={9}
+          xs={12}
           className={classes.grid}
         >
-          <Typography variant="h4" align="center" gutterBottom>
-            About LIneA
-          </Typography>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/">
+              Home
+            </Link>
+            <Typography color="textPrimary">About us</Typography>
+          </Breadcrumbs>
           <Typography
             gutterBottom
             className={classes.textFormat}
             variant="overline"
             component="h2"
           >
-            <div>
-              <p>
-                <span>
-                  The Laboratório Interinstitucional de e-Astronomia (LIneA) was created in November 2010 by an agreement signed by three research institutes of the Ministry of Science, Technology, Innovation and Communication (
-                  <a href="http://www.mctic.gov.br/">MCTIC</a>
-                  ) (
-                  <a href="http://www.lncc.br/">Laboratório Nacional de Computação Científica</a>
-                  ,
-                  {' '}
-                  <a href="http://on.br/">Observatório Nacional</a>
-                  , &nbsp;e &nbsp;
-                  <a href="https://www.rnp.br/">Rede Nacional de Ensino e Pesquisa</a>
-                  ) to provide support for the participation of Brazilian scientists in large international programs requiring an IT infrastructure such as SDSS, DES, DESI and LSST. Some of its main projects include:
-                </span>
-              </p>
-              <ol>
-                <li><span>The Quick Reduce pipeline available at CTIO to assess the quality of the images gathered by DECam; </span></li>
-                <li><span>The Science Portal, a comprehensive integrated web-based end-to-end system to streamline the production of ancillary information used to create value-added science ready catalog to feed a variety of science analysis workflows;</span></li>
-                <li><span>The Data Server interface available at Fermilab since April 2014 to enable the visualization of images and objects, and to carry out queries in the DESDM database. The interface has been accessed 4500 times over the past three years by 250 users;</span></li>
-                <li><span>The Quick Look Framework (QLF) being developed to assess the quality of the 15,000 spectra of the 5,000 objects to be observed in each exposure of DESI.</span></li>
-                <li><span>The LIneA Science Server being made available at NCSA and which will be used as one of the interfaces of the DES data release DR1.</span></li>
-              </ol>
-              <p><span>In addition, LIneA maintains a data center (1000 cores processing cluster, 1 PB mass storage and a host of other machines) for its affiliates, currently around 80 members, a mirror site for SDSS providing independent SkyServer and CasJobs services, and provides support to the computer infrastructure being used by the APOGEE-2 project at the Las Campanas Observatory.</span></p>
-            </div>
+            The Laboratório Interinstitucional de e-Astronomia (LIneA) was formally created in November 2010 by an agreement signed by three research institutes (
+            <a href="https://www.lncc.br/" target="blank">Laboratório Nacional de Computação Científica</a>,&nbsp;
+            <a href="http://www.on.br/index.php/pt-br/rvatório Nacional" target="blank">Observatório Nacional</a>&nbsp;
+            and&nbsp;
+            <a href="https://www.rnp.br/en" target="blank">Rede Nacional de Ensino e Pesquisa</a>
+            ) of the Ministry of Science, Technology, Innovation and Communication (MCTIC). LIneA has  recently become a non-profit organization with the following mission:
+            <ul>
+              <li>Act as  the Brazilian representative to international collaborations</li>
+              <li>Curate and publish astronomical datasets</li>
+              <li>Provide science platforms for the scientific exploitation of large volumes of data</li>
+              <li>Provide  infrastructure and resources to support data intensive research</li>
+            </ul>
+            LIneA is currently involved in the following projects:
+            <ul>
+              <li>Sloan Digital Sky Survey (SDSS)</li>
+              <li>Dark Energy Survey (DES)</li>
+              <li>Dark Energy Spectroscopic Survey (DESI)</li>
+              <li>Legacy Survey of Space and Time (LSST)</li>
+              <li>Transneptunian Occultation Network (TON)</li>
+            </ul>
           </Typography>
         </Grid>
       </Container>
