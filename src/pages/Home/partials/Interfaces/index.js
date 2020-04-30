@@ -97,13 +97,13 @@ function Interfaces() {
       <Container>
         <Grid
           container
-          spacing={3}
+          spacing={2}
           direction="row"
           justify="center"
           alignItems="stretch"
         >
           {interfaces.map((item) => (
-            <Grid key={item.id} item xs={12} sm={6} md={4}>
+            <Grid key={item.id} item xs={12} sm={6} md={3}>
               <Card>
                 <CardActionArea
                   href={item.url || interfacesHost + item.pathname}
@@ -132,7 +132,7 @@ function Interfaces() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions className={classes.dialogCard}>
-                  {item.description.length > 124 ? <DialogCard item={item} /> : '' }
+                  {item.description.length > 100 ? <DialogCard item={item} /> : '' }
                 </CardActions>
               </Card>
             </Grid>

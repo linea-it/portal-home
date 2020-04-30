@@ -71,7 +71,7 @@ function Banner() {
                 </tr>
               </tbody>
             </table>
-            <Grid item xs={12} sm={10} md={8} className={classes.descriptionWrapper}>
+            <Grid item xs={8} sm={8} md={7} className={classes.descriptionWrapper}>
               <Typography variant="body2" component="p">
                 The DES Science Portal is a platform developed for the Dark Energy Survey project. It hosts a variety of pipelines meant to prepare science-ready catalogs for different science applications as well as to carry out a variety of scientific analysis. The pipelines are grouped in stages that include data preparation where maps are created, objects are classified as star/galaxy and photo-zs are computed;   generation of value–added catalog;   creation of special samples; science workflows for different working groups and utilities. One of the main strengths of the system is the ability to provide complete information of all executed processes enabling the user to trace the input, configuration, the version of the codes used and the results obtained in the form of a product log with plots. The portal also provides access to a number of tools designed for the user, the developer and the administrator.
               </Typography>
