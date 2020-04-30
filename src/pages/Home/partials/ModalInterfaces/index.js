@@ -1,3 +1,4 @@
+/* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
@@ -8,6 +9,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from './styles';
+import CloseModal from './CloseModal';
 
 export default function DialogCard(props) {
   const classes = styles();
@@ -37,16 +39,16 @@ export default function DialogCard(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{props.item.title}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">
+          {props.item.title}
+          <CloseModal callbackParent={() => handleClose()} />
+        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             {props.item.description}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Close
-          </Button>
           <Button
             href={props.item.url || interfacesHost + props.item.pathname}
             target={props.item.url ? '_blanc' : '_self'}
