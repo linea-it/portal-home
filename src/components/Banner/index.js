@@ -1,7 +1,10 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,6 +15,8 @@ import styles from './styles';
 
 function Banner() {
   const classes = styles();
+
+  const [readMore, setReadMore] = useState(false);
 
   const handlerClick = (socialMedia) => {
     let uri = '';
@@ -32,6 +37,10 @@ function Banner() {
         uri = 'https://www.youtube.com/user/lineamcti';
     }
     window.open(uri, '_blank');
+  };
+
+  const handlerClickReadMore = () => {
+    setReadMore(!readMore);
   };
 
   return (
@@ -71,9 +80,19 @@ function Banner() {
                 </tr>
               </tbody>
             </table>
-            <Grid item xs={8} sm={8} md={7} className={classes.descriptionWrapper}>
-              <Typography variant="body2" component="p">
-                The DES Science Portal is a platform developed for the Dark Energy Survey project. It hosts a variety of pipelines meant to prepare science-ready catalogs for different science applications as well as to carry out a variety of scientific analysis. The pipelines are grouped in stages that include data preparation where maps are created, objects are classified as star/galaxy and photo-zs are computed;   generation of value–added catalog;   creation of special samples; science workflows for different working groups and utilities. One of the main strengths of the system is the ability to provide complete information of all executed processes enabling the user to trace the input, configuration, the version of the codes used and the results obtained in the form of a product log with plots. The portal also provides access to a number of tools designed for the user, the developer and the administrator.
+            <Grid item xs={8} sm={8} md={6} className={classes.descriptionWrapper}>
+              <Typography variant="body2" component="p" align="justify">
+                The DES Science Portal is a platform developed for the Dark Energy Survey project. It hosts a variety of pipelines meant to prepare science-ready catalogs for different science applications as well as to carry out a variety of scientific analysis
+                <span id="dots" className={readMore ? classes.none : classes.inline}>...</span>
+                <span id="more" className={readMore ? classes.inline : classes.none}>
+                  . The pipelines are grouped in stages that include data preparation where maps are created, objects are classified as star/galaxy and photo-zs are computed;   generation of value–added catalog;   creation of special samples; science workflows for different working groups and utilities. One of the main strengths of the system is the ability to provide complete information of all executed processes enabling the user to trace the input, configuration, the version of the codes used and the results obtained in the form of a product log with plots. The portal also provides access to a number of tools designed for the user, the developer and the administrator.
+                </span>
+                <span
+                  className={classes.pointer}
+                  onClick={() => { handlerClickReadMore(); }}
+                >
+                  {readMore ? ' Read Less' : ' Read More'}
+                </span>
               </Typography>
             </Grid>
           </Grid>

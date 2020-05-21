@@ -22,12 +22,12 @@ const styles = makeStyles((theme) => ({
     minHeight: 150,
   },
   cardContent: {
-    height: 70,
+    height: 50,
     paddingBottom: 0,
   },
   description: {
     display: '-webkit-box',
-    '-webkit-line-clamp': 3,
+    '-webkit-line-clamp': 2,
     '-webkit-box-orient': 'vertical',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
@@ -35,6 +35,7 @@ const styles = makeStyles((theme) => ({
   dialogCard: {
     zIndex: 9999,
     height: 28,
+    padding: 0,
   },
 }));
 

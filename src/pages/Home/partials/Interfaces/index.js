@@ -132,7 +132,7 @@ function Interfaces() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions className={classes.dialogCard}>
-                  {item.description.length > 100 ? <DialogCard item={item} /> : '' }
+                  {item.description.length > 80 ? <DialogCard item={item} /> : '' }
                 </CardActions>
               </Card>
             </Grid>
