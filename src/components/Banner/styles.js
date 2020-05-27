@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange } from '@material-ui/core/colors';
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -21,6 +20,7 @@ const styles = makeStyles((theme) => ({
   table: {
     margin: 'auto',
     paddingBottom: 8,
+    paddingTop: 50,
   },
   logo: {
     maxHeight: 50,
@@ -80,25 +80,27 @@ const styles = makeStyles((theme) => ({
     cursor: 'pointer',
   },
   titleWrapper: {
-    [theme.breakpoints.up('sm')]: {
-      margin: `${theme.spacing(12)}px 0 ${theme.spacing(16)}px`,
-    },
+    height: '400px',
   },
   descriptionWrapper: {
     margin: 'auto',
     textShadow: '1px 1px 1px #333',
-  },
-  avatar: {
-    margin: 10,
-    cursor: 'pointer',
-    color: theme.palette.getContrastText(deepOrange[500]),
-    backgroundColor: deepOrange[500],
   },
   floatRight: {
     textAlign: 'right',
     paddingRight: 40,
     position: 'relative',
     zIndex: 2,
+  },
+  none: {
+    display: 'none',
+  },
+  inline: {
+    display: 'inline',
+  },
+  pointer: {
+    cursor: 'pointer',
+    color: 'gold',
   },
 }));
 
