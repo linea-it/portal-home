@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange } from '@material-ui/core/colors';
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -86,12 +85,6 @@ const styles = makeStyles((theme) => ({
   descriptionWrapper: {
     margin: 'auto',
     textShadow: '1px 1px 1px #333',
-  },
-  avatar: {
-    margin: 10,
-    cursor: 'pointer',
-    color: theme.palette.getContrastText(deepOrange[500]),
-    backgroundColor: deepOrange[500],
   },
   floatRight: {
     textAlign: 'right',
