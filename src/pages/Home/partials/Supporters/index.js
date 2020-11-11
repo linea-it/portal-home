@@ -66,9 +66,8 @@ function Supporters() {
           naturalSlideWidth={191}
           naturalSlideHeight={78}
           totalSlides={8}
-          visibleSlides={4}
+          visibleSlides={5}
           infinite
-          isPlaying
           interval={3000}
         >
           <Slider>

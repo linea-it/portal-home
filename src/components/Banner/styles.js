@@ -7,6 +7,7 @@ const styles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     paddingTop: '40px',
+    maxHeight: '350px',
   },
   container: {
     background: 'transparent',
@@ -91,6 +92,7 @@ const styles = makeStyles((theme) => ({
     paddingRight: 40,
     position: 'relative',
     zIndex: 2,
+    top: 70,
   },
   none: {
     display: 'none',

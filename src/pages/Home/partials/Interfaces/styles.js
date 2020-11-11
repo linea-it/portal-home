@@ -7,7 +7,8 @@ const styles = makeStyles((theme) => ({
     zIndex: 2,
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(12),
-    margin: 'auto',
+    marginLeft: theme.spacing(6),
+    marginRight: theme.spacing(6),
   },
   titleItem: {
     fontFamily: 'Oxanium',

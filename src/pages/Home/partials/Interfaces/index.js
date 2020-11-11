@@ -4,13 +4,9 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import CardActions from '@material-ui/core/CardActions';
 import styles from './styles';
-import DialogCard from '../ModalInterfaces';
 
 function Interfaces() {
   const classes = styles();
@@ -88,57 +84,71 @@ function Interfaces() {
       icon: 'flask',
       image: 'des1.jpg',
     },
+    {
+      id: 9,
+      title: 'Storage Monitor',
+      description: 'Storage Monitor',
+      url: 'https://storage-monitor.linea.gov.br/',
+      icon: 'flask',
+      image: 'des10.jpg',
+    },
+    {
+      id: 10,
+      title: 'Process Monitor',
+      description: 'Process Monitor',
+      url: 'https://process-monitor.linea.gov.br/',
+      icon: 'flask',
+      image: 'des11.jpg',
+    },
   ];
 
   const interfacesHost = process.env.REACT_APP_INTERFACES_HOST;
 
   return (
     <div className={classes.root}>
-      <Container>
-        <Grid
-          container
-          spacing={2}
-          direction="row"
-          justify="center"
-          alignItems="stretch"
-        >
-          {interfaces.map((item) => (
-            <Grid key={item.id} item xs={12} sm={6} md={3}>
-              <Card>
-                <CardActionArea
-                  href={item.url || interfacesHost + item.pathname}
-                  target={item.url ? '_blanc' : '_self'}
+      <Grid
+        container
+        spacing={2}
+        direction="row"
+        justify="center"
+        alignItems="stretch"
+      >
+        {interfaces.map((item) => (
+          <Grid key={item.id} item xs={12} sm={6} md={3}>
+            <Card>
+              <CardActionArea
+                href={item.url || interfacesHost + item.pathname}
+                target={item.url ? '_blanc' : '_self'}
+              >
+                <CardMedia
+                  alt={item.title}
+                  className={classes.media}
+                  image={`${process.env.PUBLIC_URL}/img/${item.image}`}
+                  title={item.title}
                 >
-                  <CardMedia
-                    alt={item.title}
-                    className={classes.media}
-                    image={`${process.env.PUBLIC_URL}/img/${item.image}`}
-                    title={item.title}
+                  <Typography
+                    gutterBottom
+                    className={classes.titleItem}
+                    variant="h4"
+                    component="h2"
                   >
-                    <Typography
-                      gutterBottom
-                      className={classes.titleItem}
-                      variant="h5"
-                      component="h2"
-                    >
-                      {/* <i className={`fa fa-${item.icon}`}></i> &nbsp;  */}
-                      {item.title}
-                    </Typography>
-                  </CardMedia>
-                  <CardContent className={classes.cardContent}>
+                    {/* <i className={`fa fa-${item.icon}`}></i> &nbsp;  */}
+                    {item.title}
+                  </Typography>
+                </CardMedia>
+                {/* <CardContent className={classes.cardContent}>
                     <Typography variant="body2" color="textSecondary" component="div" className={classes.description}>
                       {item.description}
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions className={classes.dialogCard}>
+                  </CardContent> */}
+              </CardActionArea>
+              {/* <CardActions className={classes.dialogCard}>
                   {item.description.length > 80 ? <DialogCard item={item} /> : '' }
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+                </CardActions> */}
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
