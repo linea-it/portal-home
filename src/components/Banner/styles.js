@@ -26,15 +26,15 @@ const styles = makeStyles((theme) => ({
     fontSize: 50,
     margin: 0,
     [theme.breakpoints.down('sm')]: {
-      fontSize: 48,
+      fontSize: 32,
       margin: `0 ${theme.spacing(2)}px`,
     },
     textShadow: 'black 0.1em 0.1em 0.2em',
   },
   logo: {
     position: 'relative',
-    [theme.breakpoints.up('sm')]: {
-      maxWidth: 200,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 120,
     },
     maxWidth: 200,
   },
