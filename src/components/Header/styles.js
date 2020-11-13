@@ -1,48 +1,29 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange } from '@material-ui/core/colors';
-
 
 const styles = makeStyles((theme) => ({
-
-
-  toolbarWrapper: () => ({
-    background: theme.palette.primary.main,
-    [theme.breakpoints.up('md')]: (props) => ({
-      transition: 'background-color 0.5s',
-      background: props.scrollActive ? theme.palette.primary.main : 'transparent',
-      position: 'fixed',
-      minWidth: '100%',
-      minHeight: '60px',
-      zIndex: 1000,
-    }),
-  }),
-  container: {
-    background: 'transparent',
-    position: 'relative',
-    textAlign: 'center',
-    color: '#FFF',
-    zIndex: 2,
+  list: {
+    padding: 0,
   },
-  logo: {
-    maxHeight: 48,
-    paddingTop: '14px',
+  avatar: {
+    marginRight: 10,
   },
-  userWrapper: {
-    borderRadius: '50%',
-    margin: '0 7px',
+  appbar: {
+    background: '#212121',
   },
-  button: {
-    zIndex: 1,
-    [theme.breakpoints.up('sm')]: {
-      float: 'right',
-    },
-  },
-  username: {
-    color: '#fff',
+  separator: {
+    flexGrow: 1,
   },
   menuList: {
     display: 'flex',
-    paddingTop: '22px',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
+  menuListItem: {
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'center',
+      padding: `${theme.spacing(1)}px 0`,
+    },
   },
   menuLink: {
     color: '#fff',
@@ -51,20 +32,18 @@ const styles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     whiteSpace: 'nowrap',
   },
-  avatar: {
-    margin: 10,
-    cursor: 'pointer',
-    color: theme.palette.getContrastText(deepOrange[500]),
-    backgroundColor: deepOrange[500],
+  logoLIneA: {
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: 75,
+    },
+    maxWidth: 75,
   },
-  backgroundHeader: () => ({
-    backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.up('md')]: (props) => ({
-      backgroundColor: props.pathname === '/' ? 'transparent' : theme.palette.primary.main,
-      height: '80px',
-      marginTop: '-72px',
-    }),
-  }),
+  toolbar: {
+    display: 'flex',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
 }));
 
 export default styles;

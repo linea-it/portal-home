@@ -2,11 +2,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles((theme) => ({
   root: {
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     background: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    paddingTop: '40px',
+    height: 380,
+    marginBottom: theme.spacing(4),
   },
   container: {
     background: 'transparent',
@@ -15,92 +19,38 @@ const styles = makeStyles((theme) => ({
     color: '#FFF',
     zIndex: 2,
     marginTop: '0',
-    display: 'block',
-  },
-  table: {
-    margin: 'auto',
-    paddingBottom: 8,
-    paddingTop: 50,
-  },
-  logo: {
-    maxHeight: 50,
-    paddingLeft: '8px',
-  },
-  particlesWrapper: {
-    position: 'absolute',
-    top: 0,
-    width: '100%',
-    zIndex: 1,
-  },
-  userWrapper: {
-    borderRadius: '50%',
-    margin: '0 7px',
-  },
-  button: {
-    zIndex: 1,
-    [theme.breakpoints.up('sm')]: {
-      float: 'right',
-    },
   },
   title: {
     fontFamily: 'Oxanium',
-    textTransform: 'uppercase',
     fontWeight: 100,
-    marginTop: -30,
-    fontSize: 28,
-    [theme.breakpoints.up('sm')]: {
-      fontSize: 35,
-      marginTop: -38,
+    fontSize: 50,
+    margin: 0,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 32,
+      margin: `0 ${theme.spacing(2)}px`,
     },
-    width: 'max-content',
+    textShadow: 'black 0.1em 0.1em 0.2em',
   },
-  subtitle: {
-    fontFamily: 'Oxanium',
-    textTransform: 'uppercase',
-    fontWeight: 100,
-    marginTop: -30,
-    fontSize: 28,
-    [theme.breakpoints.up('sm')]: {
-      fontSize: 35,
-      marginTop: -38,
+  logo: {
+    position: 'relative',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 120,
     },
-    paddingTop: 8,
-    margin: 'auto',
-    width: 'max-content',
-  },
-  positionTitle: {
-    paddingTop: '8%',
-
-  },
-  desLogo: {
-    [theme.breakpoints.up('sm')]: {
-      maxWidth: 180,
-    },
-    maxWidth: '100%',
-    cursor: 'pointer',
+    maxWidth: 200,
   },
   titleWrapper: {
-    height: '400px',
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
-  descriptionWrapper: {
-    margin: 'auto',
-    textShadow: '1px 1px 1px #333',
-  },
-  floatRight: {
-    textAlign: 'right',
-    paddingRight: 40,
-    position: 'relative',
+  socialWrapper: {
+    color: '#fff',
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
     zIndex: 2,
-  },
-  none: {
-    display: 'none',
-  },
-  inline: {
-    display: 'inline',
-  },
-  pointer: {
-    cursor: 'pointer',
-    color: 'gold',
   },
 }));
 

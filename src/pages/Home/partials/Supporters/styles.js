@@ -2,13 +2,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(12),
-    width: '80%',
-    margin: 'auto',
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(10),
   },
   carouselItem: {
-    maxWidth: '100%',
+    maxWidth: '150px',
     width: 'auto',
     height: 'auto',
     margin: 'auto',
