@@ -6,21 +6,19 @@ const styles = makeStyles((theme) => ({
     position: 'relative',
     zIndex: 2,
     marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(12),
     marginLeft: theme.spacing(6),
     marginRight: theme.spacing(6),
   },
   titleItem: {
     fontFamily: 'Oxanium',
-    fontSize: '2em',
+    fontSize: '1.5em',
     paddingTop: '0.5em',
     paddingLeft: '1em',
     color: 'white',
     textShadow: '0.1em 0.1em 0.1em black',
-    overflowWrap: 'break-word',
   },
   media: {
-    minHeight: 150,
+    minHeight: 220,
   },
   cardContent: {
     height: 50,
@@ -37,6 +35,12 @@ const styles = makeStyles((theme) => ({
     zIndex: 9999,
     height: 28,
     padding: 0,
+  },
+  gridApplicationLg: {
+    [theme.breakpoints.up('lg')]: {
+      width: '20%',
+      maxWidth: '20%',
+    },
   },
 }));
 
